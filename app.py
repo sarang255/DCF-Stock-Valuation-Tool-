@@ -536,7 +536,7 @@ if run_btn or ticker_input:
         except:
             return ""
 
-    styled = sens_df.style.applymap(highlight_cell)
+    styled = sens_df.style.map(highlight_cell)
     st.dataframe(styled, use_container_width=True)
     st.markdown("<p style='font-size:11px;color:#8A8578'>🟢 Green = >15% upside · 🟡 Yellow = fairly valued · 🔴 Red = >15% overvalued vs. current price</p>", unsafe_allow_html=True)
 
